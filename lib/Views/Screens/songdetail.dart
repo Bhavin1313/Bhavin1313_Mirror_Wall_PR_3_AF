@@ -1,3 +1,4 @@
+import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 
 import '../../Model/audiomodel.dart';
@@ -10,6 +11,12 @@ class SongDetail extends StatefulWidget {
 }
 
 class _SondDetailState extends State<SongDetail> {
+  AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer();
+
+  playAudio() {
+    assetsAudioPlayer.open(Audio("${data.audio}"));
+  }
+
   @override
   Widget build(BuildContext context) {
     AudioModel data = ModalRoute.of(context)!.settings.arguments as AudioModel;
@@ -28,10 +35,12 @@ class _SondDetailState extends State<SongDetail> {
         ),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Center(
             child: Container(
+              margin: const EdgeInsets.all(18),
               height: 400,
               width: 400,
               decoration: BoxDecoration(
@@ -43,7 +52,17 @@ class _SondDetailState extends State<SongDetail> {
                 ),
               ),
             ),
-          )
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 18.0),
+            child: Text(
+              "${data.title}",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+              ),
+            ),
+          ),
         ],
       ),
     );
