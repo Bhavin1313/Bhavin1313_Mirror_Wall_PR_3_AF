@@ -64,6 +64,8 @@ flutter:
   assets:
     - lib/Utils/Assets/Audio/
     - lib/Utils/Assets/AudioPhotos/
+    - lib/Utils/Assets/Video/
+    - lib/Utils/Assets/VideoPhotos/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
