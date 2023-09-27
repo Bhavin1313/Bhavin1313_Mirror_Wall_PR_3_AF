@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'Provider/indexprovider.dart';
 import 'Views/Screens/homepage.dart';
+import 'Views/Screens/videodetail.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -20,6 +21,7 @@ void main() {
       routes: {
         '/': (context) => HomePage(),
         'songdetail': (context) => SongDetail(),
+        'videodetail': (context) => VideoDetail(),
       },
     ),
   ));

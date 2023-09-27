@@ -27,6 +27,7 @@ class _SongDetailState extends State<SongDetail> {
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
+            assetsAudioPlayer.pause();
           },
           icon: Icon(
             Icons.arrow_back_ios,

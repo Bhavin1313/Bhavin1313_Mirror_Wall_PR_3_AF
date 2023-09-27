@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:media_booster/Views/Screens/Tab%20Page/music.dart';
-import 'package:media_booster/Views/Screens/Tab%20Page/find.dart';
+
 import 'package:media_booster/Views/Screens/Tab%20Page/video.dart';
 import 'package:provider/provider.dart';
 
@@ -17,7 +17,6 @@ class _HomePageState extends State<HomePage> {
   List<Widget> pageList = [
     Music(),
     Video(),
-    Settings(),
   ];
   PageController pageController = PageController();
   @override
@@ -45,10 +44,6 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.movie),
             label: "VIDEO",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: "FIND",
           ),
         ],
       ),

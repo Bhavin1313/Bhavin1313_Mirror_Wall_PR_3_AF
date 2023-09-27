@@ -37,6 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   provider:
   assets_audio_player:
+  carousel_slider: ^4.2.1
+  video_player:
+  chewie:
 
 dev_dependencies:
   flutter_test:
