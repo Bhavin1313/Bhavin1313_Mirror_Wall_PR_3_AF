@@ -5,6 +5,7 @@ import 'package:media_booster/Views/Screens/Tab%20Page/video.dart';
 import 'package:provider/provider.dart';
 
 import '../../Provider/indexprovider.dart';
+import 'Tab Page/search.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,6 +16,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   List<Widget> pageList = [
+    Search(),
     Music(),
     Video(),
   ];
@@ -37,6 +39,10 @@ class _HomePageState extends State<HomePage> {
               duration: Duration(microseconds: 150), curve: Curves.linear);
         },
         items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search),
+            label: "SEARCH",
+          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.music_note),
             label: "MUSIC",

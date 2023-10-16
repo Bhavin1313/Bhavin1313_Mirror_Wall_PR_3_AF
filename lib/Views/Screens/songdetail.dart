@@ -49,6 +49,7 @@ class _SongDetailState extends State<SongDetail> {
                     height: 400,
                     width: 400,
                     decoration: BoxDecoration(
+                      shape: BoxShape.circle,
                       image: DecorationImage(
                         image: AssetImage(
                           data.image,
@@ -68,15 +69,13 @@ class _SongDetailState extends State<SongDetail> {
                     ),
                   ),
                 ),
-                Row(
-                  children: [
-                    Text(
-                      "${duration?.inMinutes}:${duration?.inSeconds}",
-                      style: TextStyle(
-                        color: Colors.white,
-                      ),
+                Center(
+                  child: Text(
+                    "${duration?.inMinutes}:${duration?.inSeconds}",
+                    style: TextStyle(
+                      color: Colors.white,
                     ),
-                  ],
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
